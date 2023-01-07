@@ -9,9 +9,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Vector3 _directionToPlayer;
     [SerializeField] private float _speed;
 
+    private GameFlow _gameFlow;
+    private GameUI _gameUI;
+
     private void Awake()
     {
         _player = GameObject.Find("Player");
+        _gameFlow = FindObjectOfType<GameFlow>();
+        _gameUI = FindObjectOfType<GameUI>();
     }
 
     private void Start()
@@ -30,6 +35,11 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(_gameFlow.IsGameOver == false)
+        {
+            _gameUI.IncreaseScore();
+        }
+
         Destroy(this.gameObject);
     }
 }

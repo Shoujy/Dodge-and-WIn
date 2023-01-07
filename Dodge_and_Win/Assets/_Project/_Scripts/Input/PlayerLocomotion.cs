@@ -1,20 +1,22 @@
-using System;
 using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
     private PlayerInput _playerInput;
+    private GameFlow _gameFlow;
 
     [SerializeField] private float _speed;
 
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
+        _gameFlow = FindObjectOfType<GameFlow>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        // if (isGameOver == true) { return; }
+        if (_gameFlow.IsGameOver == true) { return; }
+        
         Vector2 move = _playerInput.MoveComposite;
 
         transform.Translate(move * Time.deltaTime * _speed);
@@ -24,7 +26,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy touch you!");
+            _gameFlow.ChangeGameState();
         }
     }
 }

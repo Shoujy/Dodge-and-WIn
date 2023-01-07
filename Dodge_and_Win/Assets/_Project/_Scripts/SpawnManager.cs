@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    [Header("Art")]
     [SerializeField] private GameObject _enemyPrefab;
 
+    [Header("Settings")]
+    [SerializeField] private Vector3 _center;
+    [SerializeField] private float _radius;
     [SerializeField] private float _timeDelay;
     [SerializeField] private float _spawnRate;
 
-    [SerializeField] private Vector3 _center;
-    [SerializeField] private float _radius;
+    private GameFlow _gameFlow;
 
+    private void Awake()
+    {
+        _gameFlow = FindObjectOfType<GameFlow>();
+    }
     private void Start()
     {
         InvokeRepeating("EnemySpawnInRandomCircle", _timeDelay, _spawnRate);
@@ -17,7 +24,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        // if(isGameOver == true) { CancelInvoke(); }
+        if(_gameFlow.IsGameOver == true) { CancelInvoke(); }
     }
 
     private void EnemySpawnInRandomCircle()
