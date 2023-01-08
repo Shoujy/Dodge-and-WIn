@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
+    private void Start()
+    {
+        SoundManager.Instance.StopMusic();
+    }
+
     public void Retry()
     {
         SceneManager.LoadScene(1);
