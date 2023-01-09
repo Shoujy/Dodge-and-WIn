@@ -8,9 +8,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private AudioSource _effectSource;
 
-    [SerializeField] private AudioClip _menuMusic;
-    [SerializeField] private AudioClip _levelMusic;
-
     private void Awake()
     {
         if(Instance == null)
@@ -29,14 +26,14 @@ public class SoundManager : MonoBehaviour
         _effectSource.PlayOneShot(clip);
     }
 
-    public void PlayMenuMusic()
+    public void PlayMenuMusic(AudioClip clip)
     {
         if(Instance != null)
         {
             if(_musicSource != null)
             {
                 _musicSource.Stop();
-                _musicSource.clip = _menuMusic;
+                _musicSource.clip = clip;
                 _musicSource.Play();
             }
         }
@@ -46,14 +43,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayGameMusic()
+    public void PlayGameMusic(AudioClip clip)
     {
         if (Instance != null)
         {
             if (_musicSource != null)
             {
                 _musicSource.Stop();
-                _musicSource.clip = _levelMusic;
+                _musicSource.clip = clip;
                 _musicSource.Play();
             }
         }
@@ -66,5 +63,15 @@ public class SoundManager : MonoBehaviour
     public void StopMusic()
     {
         _musicSource.Stop();
+    }
+
+    public void ChangeMusicVolume(float value)
+    {
+        _musicSource.volume = value;
+    }
+
+    public void ChangeSoundVolume(float value)
+    {
+        _effectSource.volume = value;
     }
 }

@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
 
     private GameFlow _gameFlow;
 
+
     private void Awake()
     {
         _gameFlow = FindObjectOfType<GameFlow>();
@@ -36,5 +37,12 @@ public class SpawnManager : MonoBehaviour
         position.z = _center.z;
 
         Instantiate(_enemyPrefab, position, Quaternion.identity);
+    }
+
+    public void UpgradeDifficult()
+    {
+        CancelInvoke();
+        _spawnRate -= 0.1f;
+        InvokeRepeating("EnemySpawnInRandomCircle", _timeDelay, _spawnRate);
     }
 }

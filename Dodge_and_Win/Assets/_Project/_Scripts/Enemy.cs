@@ -1,5 +1,3 @@
-using System;
-using System.Xml.Serialization;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -11,12 +9,14 @@ public class Enemy : MonoBehaviour
 
     private GameFlow _gameFlow;
     private GameUI _gameUI;
+    private SpawnManager _spawnManager;
 
     private void Awake()
     {
         _player = GameObject.Find("Player");
         _gameFlow = FindObjectOfType<GameFlow>();
         _gameUI = FindObjectOfType<GameUI>();
+        _spawnManager = FindObjectOfType<SpawnManager>();
     }
 
     private void Start()
@@ -33,12 +33,16 @@ public class Enemy : MonoBehaviour
         transform.Translate(_directionToPlayer * _speed * Time.deltaTime);
     }
 
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(_gameFlow.IsGameOver == false)
         {
             _gameUI.IncreaseScore();
         }
+
+        _gameUI.ScoreChange(_gameUI.Score);
 
         Destroy(this.gameObject);
     }
