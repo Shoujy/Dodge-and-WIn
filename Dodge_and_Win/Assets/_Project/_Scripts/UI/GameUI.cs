@@ -28,9 +28,9 @@ public class GameUI : MonoBehaviour
         _scoreText.SetText(_score.ToString());
     }
 
-    public void ScoreChange(int score)
+    public void ScoreChange()
     {
-        switch (score)
+        switch (_score)
         {
             case 20:
                 _spawnManager.UpgradeDifficult();

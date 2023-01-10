@@ -3208,8 +3208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicSource: {fileID: 980566003}
   _effectSource: {fileID: 1576677657}
-  _menuMusic: {fileID: 8300000, guid: b76dee63927eec549ab421da21568d8c, type: 3}
-  _levelMusic: {fileID: 8300000, guid: 925f37a784fecd44b9944cb7f5e3111f, type: 3}
 --- !u!1 &1467372727
 GameObject:
   m_ObjectHideFlags: 0

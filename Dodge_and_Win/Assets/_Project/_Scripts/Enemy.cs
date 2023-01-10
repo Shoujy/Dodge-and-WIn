@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
             _gameUI.IncreaseScore();
         }
 
-        _gameUI.ScoreChange(_gameUI.Score);
+        _gameUI.ScoreChange();
 
         Destroy(this.gameObject);
     }
