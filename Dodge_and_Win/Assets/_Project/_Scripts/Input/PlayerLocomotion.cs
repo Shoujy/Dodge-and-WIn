@@ -41,6 +41,7 @@ public class PlayerLocomotion : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             _playerRB.velocity = Vector2.zero;
+
             _gameFlow.ChangeGameState();
         }
     }

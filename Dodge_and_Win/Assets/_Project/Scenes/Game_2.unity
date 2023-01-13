@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531273a3c3503b74b853b3d9f1d5e6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 2683993106772019716, guid: e00c26de6d1ef9849be9741b0ae6d538, type: 3}
+  _enemyPrefab: {fileID: 2683993106772019716, guid: 056ff88f67add3a41bd71acd98e2e94a, type: 3}
   _center: {x: 0, y: 0, z: 0}
   _radius: 17
   _timeDelay: 3
@@ -1349,6 +1349,7 @@ Transform:
   - {fileID: 710790530}
   - {fileID: 1052410849}
   - {fileID: 2116989166}
+  - {fileID: 1827209241}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2060,7 +2061,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
-  m_Color: {r: 0.7408655, g: 0.9433962, b: 0.4663581, a: 1}
+  m_Color: {r: 0, g: 0.7924528, b: 0.7234313, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2210,8 +2211,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.7411765, g: 0.9450981, b: 0.4666667, a: 1}
-      key1: {r: 0.7411765, g: 0.9450981, b: 0.4666667, a: 1}
+      key0: {r: 0, g: 0.79215693, b: 0.72156864, a: 1}
+      key1: {r: 0, g: 0.79215693, b: 0.72156864, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2693,6 +2694,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1827209240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827209241}
+  - component: {fileID: 1827209242}
+  m_Layer: 0
+  m_Name: DataHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1827209241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827209240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 746334977}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827209242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827209240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51ccebef9d1e3c4ebd2d4e6416bafdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1942738158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +2762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942738158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: -2.62, y: 0, z: 5}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 192518745}
@@ -2764,8 +2808,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fa3eaf268fb7b834fb3f15f39f0d9ef0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: dbc64a49563192544ad5dd354e48f7b5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2891,6 +2935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077a602e555486a40a829471ad82bec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _topScoreText: {fileID: 1520836940}
 --- !u!114 &2044166051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3085,4 +3130,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e828f45f17042984485e5a3267ff658b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: 925f37a784fecd44b9944cb7f5e3111f, type: 3}
+  _clip: {fileID: 8300000, guid: ed4e940e489c31b4f9560e1680486bb1, type: 3}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameFlow : MonoBehaviour
 {
@@ -16,6 +17,15 @@ public class GameFlow : MonoBehaviour
     public void ChangeGameState()
     {
         _isGameOver = true;
+
+        var gameUI = FindObjectOfType<GameUI>();
+
+        if(gameUI.Score > DataManager.Instance.TopMapScores[SceneManager.GetActiveScene().buildIndex])
+        {
+            DataManager.Instance.TopMapScores[SceneManager.GetActiveScene().buildIndex] = gameUI.Score;
+            DataManager.Instance.SaveData();
+        }
+
         _gameOverPanel.SetActive(true);
     }
 }
