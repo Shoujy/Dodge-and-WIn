@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a7e1b189e4b6845b3fbf2675f27b35, type: 3}
+  m_Name: Map3
+  m_EditorClassIdentifier: 
+  Background: {fileID: 21300000, guid: 8dff5ffc3533e1b40b61f38b61c943b9, type: 3}
+  Clip: {fileID: 8300000, guid: a2ab8c822074bdb49bd8425c4e3c1576, type: 3}
+  Enemy: {fileID: 2683993106772019716, guid: 370640e0493e85a47bb158f43d729015, type: 3}
+  Player: {fileID: 2965961618199630528, guid: 7c5285bd0f0ed9140b1762978740cbb4, type: 3}

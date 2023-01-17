@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8dff5ffc3533e1b40b61f38b61c943b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f397a8240aaeab043a619c3a0d438237, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -777,8 +777,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 76df918c82d152944ab601ff64e2bf8e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 81923659828def2418103a6bf5db40a2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dbc64a49563192544ad5dd354e48f7b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb96afa5a75cf6b4fad54e878b21f8b4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a851916c7ac5bb4f93e021094b5d167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b315fa36b66f7e43964ac1257d5a1f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2045,6 +2045,18 @@ MonoBehaviour:
       - m_Target: {fileID: 537671553}
         m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
         m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 537671552}
+        m_TargetAssemblyTypeName: MapsUI, Assembly-CSharp
+        m_MethodName: LoadMap_5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2460,10 +2472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3303,7 +3315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a4ce62eca800e9646ad1573fc83c4579, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cdafdb181ab85d94e82efb2928554e7c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3368,6 +3380,18 @@ MonoBehaviour:
       - m_Target: {fileID: 537671553}
         m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
         m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 537671552}
+        m_TargetAssemblyTypeName: MapsUI, Assembly-CSharp
+        m_MethodName: LoadMap_4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

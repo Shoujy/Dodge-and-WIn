@@ -6,7 +6,7 @@ public class GameUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _scoreText;
 
-    private SpawnManager _spawnManager;
+    private UnitSpawner __unitSpawner;
 
     private int _score;
 
@@ -14,7 +14,7 @@ public class GameUI : MonoBehaviour
 
     private void Awake()
     {
-        _spawnManager = FindObjectOfType<SpawnManager>();
+        __unitSpawner = FindObjectOfType<UnitSpawner>();
     }
 
     private void Start()
@@ -33,23 +33,23 @@ public class GameUI : MonoBehaviour
         switch (_score)
         {
             case 20:
-                _spawnManager.UpgradeDifficult();
+                __unitSpawner.UpgradeDifficult();
                 break;
 
             case 50:
-                _spawnManager.UpgradeDifficult();
+                __unitSpawner.UpgradeDifficult();
                 break;
 
             case 100:
-                _spawnManager.UpgradeDifficult();
+                __unitSpawner.UpgradeDifficult();
                 break;
 
             case 200:
-                _spawnManager.UpgradeDifficult();
+                __unitSpawner.UpgradeDifficult();
                 break;
 
             case 500:
-                _spawnManager.UpgradeDifficult();
+                __unitSpawner.UpgradeDifficult();
                 break;
 
             default:
