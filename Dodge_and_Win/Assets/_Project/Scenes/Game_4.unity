@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 2683993106772019716, guid: 2285724c5b915e041b6b5520fc9bc2c9, type: 3}
-  _poolSize: 10
+  _poolSize: 15
 --- !u!1 &1942738158
 GameObject:
   m_ObjectHideFlags: 0
