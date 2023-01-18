@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private AudioSource _effectSource;
 
+    public AudioSource MusicSource => _musicSource;
+
     private void Awake()
     {
         if(Instance == null)

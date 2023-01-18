@@ -7,7 +7,7 @@ public class HelpAnim : MonoBehaviour
 
     [SerializeField] private float _scaleTo;
     [SerializeField] private float _scaleDuration;
-
+    
     void Start()
     {
         _text.transform.DOScale(_scaleTo, _scaleDuration).SetLoops(4, LoopType.Yoyo);
