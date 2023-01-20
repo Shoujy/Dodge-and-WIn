@@ -43,6 +43,8 @@ public class PlayerLocomotion : MonoBehaviour
             _playerRB.velocity = Vector2.zero;
 
             _gameFlow.ChangeGameState();
+
+            Destroy(gameObject);
         }
     }
 }

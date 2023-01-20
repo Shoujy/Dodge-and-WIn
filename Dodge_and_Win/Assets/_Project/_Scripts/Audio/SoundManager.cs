@@ -64,7 +64,12 @@ public class SoundManager : MonoBehaviour
 
     public void StopMusic()
     {
-        _musicSource.Stop();
+        _musicSource.Pause();
+    }
+
+    public void PlayMusic()
+    {
+        _musicSource.Play();
     }
 
     public void ChangeMusicVolume(float value)

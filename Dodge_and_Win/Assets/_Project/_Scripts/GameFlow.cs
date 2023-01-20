@@ -26,6 +26,8 @@ public class GameFlow : MonoBehaviour
             DataManager.Instance.SaveData();
         }
 
+        SessionData.Instance.IncreaseGameCount();
+
         _gameOverPanel.SetActive(true);
     }
 }
