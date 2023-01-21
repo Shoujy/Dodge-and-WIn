@@ -4,7 +4,7 @@ using GoogleMobileAds.Api;
 public class Interstitial : MonoBehaviour
 {
     private InterstitialAd _interstitial;
-    private string _interstitialID = "ca-app-pub-3499239843570584~3615217895";
+    private string _interstitialID = "ca-app-pub-3499239843570584/6064205698";
 
     private void Start()
     {
