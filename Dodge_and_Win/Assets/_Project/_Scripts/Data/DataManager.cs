@@ -23,7 +23,7 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(Application.persistentDataPath);
+        // Debug.Log(Application.persistentDataPath);
 
         for (int i = 0; i < TopMapScores.Count; i++)
         {

@@ -13,8 +13,11 @@ public class PlayerLocomotion : MonoBehaviour
 
     [SerializeField] private float _speed;
 
+    public float Speed => _speed;
+
     private void Awake()
     {
+        _joystick = FindObjectOfType<FloatingJoystick>();
         _gameFlow = FindObjectOfType<GameFlow>();
         _playerRB = GetComponent<Rigidbody2D>();
     }
@@ -44,7 +47,23 @@ public class PlayerLocomotion : MonoBehaviour
 
             _gameFlow.ChangeGameState();
 
-            Destroy(gameObject);
+            var enemies = FindObjectsOfType<Unit>();
+            var objectPooler = FindObjectOfType<ObjectPooler>();
+
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                objectPooler.Despawn(enemies[i].gameObject);
+            }
         }
+    }
+
+    public void SpeedUp(float speedMultiplier)
+    {
+        _speed *= speedMultiplier;
+    }
+
+    public void ReturnBasicSpeed(float basicSpeed)
+    {
+        _speed = basicSpeed;
     }
 }
