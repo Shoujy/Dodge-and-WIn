@@ -19,11 +19,13 @@ public class DataManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        LoadData();
     }
 
     private void Start()
     {
-        // Debug.Log(Application.persistentDataPath);
+         Debug.Log(Application.persistentDataPath);
 
         for (int i = 0; i < TopMapScores.Count; i++)
         {
@@ -31,7 +33,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    class Data
+    private class Data
     {
         public List<int> TopMapScores = new List<int>(6);
     }

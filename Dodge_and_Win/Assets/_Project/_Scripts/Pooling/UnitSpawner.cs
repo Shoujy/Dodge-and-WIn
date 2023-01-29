@@ -41,6 +41,7 @@ public class UnitSpawner : MonoBehaviour
     {
         CancelInvoke();
         _spawnRate -= 0.1f;
+        _timeDelay = 7.0f;
         InvokeRepeating("SpawnUnit", _timeDelay, _spawnRate);
     }
 }
