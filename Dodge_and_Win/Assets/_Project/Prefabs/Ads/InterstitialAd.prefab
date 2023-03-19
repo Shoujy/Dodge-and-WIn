@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8783973918856425666}
   - component: {fileID: 8783973918856425667}
   - component: {fileID: 8783973918856425724}
+  - component: {fileID: 3821013036222111260}
   m_Layer: 0
   m_Name: InterstitialAd
   m_TagString: Untagged
@@ -100,3 +101,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3821013036222111260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783973918856425726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb04ecdb1d63a7c4f8de3d9b3ca8136e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

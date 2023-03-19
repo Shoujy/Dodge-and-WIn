@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameOverUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _topScoreText;
-    // [SerializeField] private Interstitial _interstitial;
+    [SerializeField] private LevelPlayAds _interstitial;
 
     private void Start()
     {
@@ -15,14 +15,16 @@ public class GameOverUI : MonoBehaviour
         // ToDO: Check for each 3rd game in this session and if (session % 3 == 0)  => Invoke("ShowInterstitial", 1.0f);
         if(SessionData.Instance.GameCount % 3 == 0)
         {
-            // Invoke("ShowInterstitial", 0.75f);
+            Invoke("ShowInterstitial", 0.75f);
         }
     }
 
-    //private void ShowInterstitial()
-    //{
-    //    _interstitial.ShowInterstitialAd();
-    //}
+    private void ShowInterstitial()
+    {
+        _interstitial.ShowAd();
+
+        _interstitial.LoadAd();
+    }
 
     public void Retry()
     {
